@@ -1,0 +1,64 @@
+﻿@model IEnumerable<O7ECM.Code.Regla>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_ViewStart.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Actividades.DescripcionActividad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bandeja.NombreBandeja)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tramite.DescripcionTramite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tiempo_Dia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tiempo_Hora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tiempo_Minuto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Actividades.DescripcionActividad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bandeja.NombreBandeja)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tramite.DescripcionTramite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tiempo_Dia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tiempo_Hora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tiempo_Minuto)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

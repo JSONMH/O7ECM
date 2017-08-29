@@ -45,11 +45,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -96,6 +96,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -164,6 +166,21 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccesoControlador.cs" />
+    <Compile Include="Controllers\ActividadesControlador.cs" />
+    <Compile Include="Controllers\BandejasControlador.cs" />
+    <Compile Include="Controllers\EntidadsControlador.cs" />
+    <Compile Include="Controllers\MaestroRepositoriosControlador.cs" />
+    <Compile Include="Controllers\ReglasControlador.cs" />
+    <Compile Include="Controllers\TramitesControlador.cs" />
+    <Compile Include="Entidad\Acceso.cs" />
+    <Compile Include="Entidad\Actividades.cs" />
+    <Compile Include="Entidad\Bandeja.cs" />
+    <Compile Include="Entidad\Entidad.cs" />
+    <Compile Include="ContextoBD\ECMEntities.cs" />
+    <Compile Include="Entidad\MaestroRepositorio.cs" />
+    <Compile Include="Entidad\Regla.cs" />
+    <Compile Include="Entidad\Tramite.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -208,9 +225,43 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\ActividadesControlador\Create.cshtml" />
+    <Content Include="Views\ActividadesControlador\Delete.cshtml" />
+    <Content Include="Views\ActividadesControlador\Details.cshtml" />
+    <Content Include="Views\ActividadesControlador\Edit.cshtml" />
+    <Content Include="Views\ActividadesControlador\Index.cshtml" />
+    <Content Include="Views\AccesoControlador\Create.cshtml" />
+    <Content Include="Views\AccesoControlador\Delete.cshtml" />
+    <Content Include="Views\AccesoControlador\Details.cshtml" />
+    <Content Include="Views\AccesoControlador\Edit.cshtml" />
+    <Content Include="Views\AccesoControlador\Index.cshtml" />
+    <Content Include="Views\BandejasControlador\Create.cshtml" />
+    <Content Include="Views\BandejasControlador\Delete.cshtml" />
+    <Content Include="Views\BandejasControlador\Details.cshtml" />
+    <Content Include="Views\BandejasControlador\Edit.cshtml" />
+    <Content Include="Views\BandejasControlador\Index.cshtml" />
+    <Content Include="Views\EntidadsControlador\Create.cshtml" />
+    <Content Include="Views\EntidadsControlador\Delete.cshtml" />
+    <Content Include="Views\EntidadsControlador\Details.cshtml" />
+    <Content Include="Views\EntidadsControlador\Edit.cshtml" />
+    <Content Include="Views\EntidadsControlador\Index.cshtml" />
+    <Content Include="Views\MaestroRepositoriosControlador\Create.cshtml" />
+    <Content Include="Views\MaestroRepositoriosControlador\Delete.cshtml" />
+    <Content Include="Views\MaestroRepositoriosControlador\Details.cshtml" />
+    <Content Include="Views\MaestroRepositoriosControlador\Edit.cshtml" />
+    <Content Include="Views\MaestroRepositoriosControlador\Index.cshtml" />
+    <Content Include="Views\ReglasControlador\Create.cshtml" />
+    <Content Include="Views\ReglasControlador\Delete.cshtml" />
+    <Content Include="Views\ReglasControlador\Details.cshtml" />
+    <Content Include="Views\ReglasControlador\Edit.cshtml" />
+    <Content Include="Views\ReglasControlador\Index.cshtml" />
+    <Content Include="Views\TramitesControlador\Create.cshtml" />
+    <Content Include="Views\TramitesControlador\Delete.cshtml" />
+    <Content Include="Views\TramitesControlador\Details.cshtml" />
+    <Content Include="Views\TramitesControlador\Edit.cshtml" />
+    <Content Include="Views\TramitesControlador\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
